@@ -1,0 +1,5 @@
+.paragraph {
+  font-size: var(--bodyFontSize);
+  font-weight: var(--bodyFontWeight);
+  color: var(--colorMediumGray);
+}
