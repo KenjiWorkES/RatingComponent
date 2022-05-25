@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./App.css";
 import RatingTemplate from "./components/templates/RatingTemplate";
 import ThankYouTemplate from "./components/templates/ThankYouTemplate";
+import RatingContext from "./contexts/rating-context";
 
 function App() {
+  const ratingCtx = useContext(RatingContext);
+
   return (
     <>
-      <ThankYouTemplate></ThankYouTemplate>
+      {!ratingCtx.isRating && <RatingTemplate></RatingTemplate>}
+      {ratingCtx.isRating && <ThankYouTemplate></ThankYouTemplate>}
     </>
   );
 }

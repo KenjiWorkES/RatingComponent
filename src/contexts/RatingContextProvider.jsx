@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 
 import RatingContext from "./rating-context";
 
-const RatingContextProvider = () => {
-  const ratingData = {
-    result: 0,
-    isRating: false,
+const RatingContextProvider = (props) => {
+  const [result, setResult] = useState();
+  const [isRating, setIsRating] = useState();
+
+  const getResultHandler = (event) => {
+    setResult(event.target.id);
+    console.log(result);
   };
 
-  return <RatingContext.Provider value={ratingData}></RatingContext.Provider>;
+  const submitResultHandler = () => {
+    setIsRating(true);
+    console.log(isRating);
+  };
+
+  const ratingData = {
+    result: result,
+    isRating: isRating,
+    setResult: getResultHandler,
+    setISRating: submitResultHandler,
+  };
+
+  return (
+    <RatingContext.Provider value={ratingData}>
+      {props.children}
+    </RatingContext.Provider>
+  );
 };
 
 export default RatingContextProvider;

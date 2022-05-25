@@ -1,24 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import "./RatingAction.css";
 import RatingItem from "../../atoms/RatingItem";
 import { Button } from "../../atoms";
+import RatingContext from "../../../contexts/rating-context";
 
 const RatingAction = () => {
   const ratingItems = ["1", "2", "3", "4", "5"];
-  const [ratingLevel, setRatingLevel] = useState();
+  const ratingCtx = useContext(RatingContext);
 
   const ratingHandler = (event) => {
-    setRatingLevel(event.target.id);
-    console.log(event.target.id);
+    event.preventDefault();
+    ratingCtx.setResult(event);
+  };
+
+  const submitRatingHandler = (event) => {
+    event.preventDefault();
+    ratingCtx.setISRating();
   };
 
   return (
-    <div className="rating__action">
+    <form className="rating__action">
       <div className="rating__action__numbers">
         {ratingItems.map((ratingItem) => (
           <RatingItem
-            className={ratingLevel === ratingItem && "rating__item--active"}
+            className={
+              ratingCtx.result === ratingItem && "rating__item--active"
+            }
             key={ratingItem}
             onRating={ratingHandler}
             id={ratingItem}
@@ -28,9 +36,9 @@ const RatingAction = () => {
         ))}
       </div>
       <div className="rating__action__button">
-        <Button>SUBMIT</Button>
+        <Button onClick={submitRatingHandler}>SUBMIT</Button>
       </div>
-    </div>
+    </form>
   );
 };
 
