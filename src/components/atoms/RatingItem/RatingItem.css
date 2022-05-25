@@ -7,4 +7,16 @@
   color: var(--colorMediumGray);
   border-radius: 50%;
   background-color: var(--colorDarkBlue200);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rating__item:hover {
+  background-color: var(--colorMediumGray);
+  color: var(--colorWhite);
+}
+
+.rating__item--active {
+  background-color: var(--colorPrimary);
+  color: var(--colorWhite);
 }
