@@ -1,0 +1,14 @@
+.thank-you__result {
+  background-color: var(--colorDarkBlue200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  padding: 8px 0;
+  border-radius: 15px;
+}
+
+.thank-you__result__text {
+  color: var(--colorPrimary);
+  font-size: var(--bodyFontSize);
+}
