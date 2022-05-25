@@ -1,0 +1,14 @@
+:root{
+--colorPrimary: hsl(25, 97%, 53%);
+
+--colorWhite: hsl(0, 0%, 100%);
+--colorLightGray: hsl(217, 12%, 63%);
+--colorMediumGray: hsl(216, 12%, 54%);
+--colorDarBlue: hsl(213, 19%, 18%);
+--colorVeryDarkBlue: hsl(216, 12%, 8%);
+
+--fontFamily: font-family: 'Overpass', sans-serif;
+--bodyFontSize: 15px
+--bodyFontWeight: 500;
+--titleFontWeight:700;
+}
