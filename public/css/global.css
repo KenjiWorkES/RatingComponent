@@ -5,6 +5,7 @@
   --colorLightGray: hsl(217, 12%, 63%);
   --colorMediumGray: hsl(216, 12%, 54%);
   --colorDarkBlue: hsl(213, 19%, 18%);
+  --colorDarkBlue200: #272a30;
   --colorVeryDarkBlue: hsl(216, 12%, 8%);
 
   --fontFamily: "Overpass", sans-serif;
