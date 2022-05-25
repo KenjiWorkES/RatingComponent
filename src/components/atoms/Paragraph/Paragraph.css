@@ -3,3 +3,7 @@
   font-weight: var(--bodyFontWeight);
   color: var(--colorMediumGray);
 }
+
+.paragraph--center {
+  text-align: center;
+}

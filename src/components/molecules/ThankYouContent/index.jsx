@@ -7,8 +7,8 @@ import Paragraph from "../../atoms/Paragraph";
 const ThankYouContent = () => {
   return (
     <>
-      <Title>Thank You!</Title>
-      <Paragraph>
+      <Title className="title--center">Thank You!</Title>
+      <Paragraph className="paragraph--center">
         We appreciate you taking the time to give a rating. If you ever need
         more support, don't hesitate to get in touch!
       </Paragraph>
