@@ -1,4 +1,6 @@
 .rating {
-  width: 350px;
+  width: 400px;
+  padding: 30px;
+  border-radius: 25px;
   background-color: var(--colorDarkBlue);
 }
