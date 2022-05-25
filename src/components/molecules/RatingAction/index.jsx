@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./RatingAction.css";
 import RatingItem from "../../atoms/RatingItem";
-import Button from "../../atoms/Button";
+import { Button } from "../../atoms";
 
 const RatingAction = () => {
   const ratingItems = ["1", "2", "3", "4", "5"];
@@ -17,7 +17,12 @@ const RatingAction = () => {
     <div className="rating__action">
       <div className="rating__action__numbers">
         {ratingItems.map((ratingItem) => (
-          <RatingItem key={ratingItem} onRating={ratingHandler} id={ratingItem}>
+          <RatingItem
+            className={ratingLevel === ratingItem && "rating__item--active"}
+            key={ratingItem}
+            onRating={ratingHandler}
+            id={ratingItem}
+          >
             {ratingItem}
           </RatingItem>
         ))}
