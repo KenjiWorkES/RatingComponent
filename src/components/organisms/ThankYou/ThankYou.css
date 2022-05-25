@@ -1,0 +1,10 @@
+.thank-you {
+  width: 400px;
+  padding: 30px;
+  border-radius: 25px;
+  background-color: var(--colorDarkBlue);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
