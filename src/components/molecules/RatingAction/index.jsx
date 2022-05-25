@@ -1,18 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./RatingAction.css";
 import RatingItem from "../../atoms/RatingItem";
 import Button from "../../atoms/Button";
 
 const RatingAction = () => {
+  const ratingItems = ["1", "2", "3", "4", "5"];
+  const [ratingLevel, setRatingLevel] = useState();
+
+  const ratingHandler = (event) => {
+    setRatingLevel(event.target.id);
+    console.log(event.target.id);
+  };
+
   return (
     <div className="rating__action">
       <div className="rating__action__numbers">
-        <RatingItem>1</RatingItem>
-        <RatingItem>2</RatingItem>
-        <RatingItem>3</RatingItem>
-        <RatingItem>4</RatingItem>
-        <RatingItem>5</RatingItem>
+        {ratingItems.map((ratingItem) => (
+          <RatingItem key={ratingItem} onRating={ratingHandler} id={ratingItem}>
+            {ratingItem}
+          </RatingItem>
+        ))}
       </div>
       <div className="rating__action__button">
         <Button>SUBMIT</Button>
