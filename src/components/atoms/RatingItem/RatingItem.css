@@ -1,6 +1,10 @@
 .rating__item {
   border: none;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+  font-family: var(--fontFamily);
+  font-size: 18px;
+  color: var(--colorMediumGray);
+  border-radius: 50%;
   background-color: var(--colorDarkBlue200);
 }

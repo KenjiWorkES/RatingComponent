@@ -1,0 +1,4 @@
+.rating__action {
+  display: flex;
+  justify-content: space-between;
+}
