@@ -6,7 +6,7 @@ import ThankYouTemplate from "./components/templates/ThankYouTemplate";
 function App() {
   return (
     <>
-      <RatingTemplate></RatingTemplate>
+      <ThankYouTemplate></ThankYouTemplate>
     </>
   );
 }
