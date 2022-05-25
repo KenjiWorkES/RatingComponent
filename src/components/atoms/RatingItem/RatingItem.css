@@ -1,0 +1,6 @@
+.rating__item {
+  border: none;
+  width: 50px;
+  height: 50px;
+  background-color: var(--colorDarkBlue200);
+}
