@@ -1,0 +1,5 @@
+.title {
+  color: var(--colorWhite);
+  font-weight: var(--titleFontWeight);
+  font-size: 30px;
+}
